@@ -5,9 +5,42 @@
     <link rel="stylesheet" href="./css/main.css">
 </head>
 <body>
-		<!-- Your code goes here-->
-
-	<!-- Add JS at the bottom of HTML file --> 
+    <h1>Determination of Planck's Constant</h1>
+    <div class="experiment-container">
+        <div class="circuit-diagram">
+            Circuit Diagram Placeholder
+        </div>
+        <div class="setup">
+            <div class="component">Battery</div>
+            <div class="component">Rheostat</div>
+            <div class="component">Resistor</div>
+            <div class="component">LED</div>
+            <div class="component">Voltmeter</div>
+            <div class="component">Ammeter</div>
+        </div>
+    </div>
+    
+    <div class="controls">
+        <label for="led">Choose LED:</label>
+        <select id="led">
+            <option value="650">Red LED (650 nm)</option>
+            <option value="550">Green LED (550 nm)</option>
+            <option value="450">Blue LED (450 nm)</option>
+            <option value="320">Yellow LED (320nm)</option>
+        </select>
+        <br><br>
+        <label for="rheostat">Rheostat Value:</label>
+        <input type="range" id="rheostat" min="0" max="100" step="1" value="0">
+        <span id="rheostatValue">0</span>
+        <br><br>
+        <button onclick="resetExperiment()">RESET</button>
+    </div>
+    
+    <div class="meter-container">
+        <div class="meter">Voltmeter: <span id="voltageReading">0</span> V</div>
+        <div class="meter">Ammeter: <span id="currentReading">0</span> A</div>
+    </div>
+<!-- Add JS at the bottom of HTML file --> 
         <script src="./js/main.js"></script>
 </body>
 </html>
